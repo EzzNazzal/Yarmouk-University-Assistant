@@ -105,7 +105,7 @@ if not os.path.exists(unknown_log_path):
         writer.writerow(['Date', 'Original Query', 'Processed Query'])
 
 # API Key for OpenRouter
-api_key = os.getenv('LLM_API_KEY')
+api_key = os.getenv('api_key')
 
 class NameMatcher:
     def __init__(self, names_list):
