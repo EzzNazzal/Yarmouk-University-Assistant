@@ -49,7 +49,7 @@ app = Flask(__name__)
 app.config['INITIALIZED'] = False
 
 # Telegram Bot Configuration
-BOT_TOKEN = '7741799690:AAHvMyriTfBCQjHRj-F1z5_cqxHLZeyNbRQ'
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 # Download NLTK resources on startup
 try:
@@ -105,7 +105,7 @@ if not os.path.exists(unknown_log_path):
         writer.writerow(['Date', 'Original Query', 'Processed Query'])
 
 # API Key for OpenRouter
-api_key = "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"
+api_key = os.getenv('LLM_API_KEY')
 
 class NameMatcher:
     def __init__(self, names_list):
